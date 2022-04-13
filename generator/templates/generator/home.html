@@ -4,49 +4,66 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Pokedex</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap"
+      rel="stylesheet"
+    />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'home.css' %}" />
   </head>
   <body>
-    <form action="{% url 'pokedex' %}">
-      <select name="pokemon" id="">
-        <option value="bulbasaur">Bulbasaur</option>
-        <option value="ivysaur">Ivysaur</option>
-        <option value="venusaur">Venusaur</option>
-        <option value="charmander">Charmander</option>
-        <option value="charmeleon">Charmeleon</option>
-        <option value="charizard">Charizard</option>
-        <option value="squirtle">Squirtle</option>
-        <option value="wartortle">Wartortle</option>
-        <option value="blastoise">Blastoise</option>
-        <option value="caterpie">Caterpie</option>
-        <option value="metapod">Metapod</option>
-        <option value="butterfree">Butterfree</option>
-        <option value="weedle">Weedle</option>
-        <option value="kakuna">Kakuna</option>
-        <option value="beedrill">Beedrill</option>
-        <option value="pidgey">Pidgey</option>
-        <option value="pidgeotto">Pidgeotto</option>
-        <option value="pidgeot">Pidgeot</option>
-        <option value="rattata">Rattata</option>
-        <option value="raticate">Raticate</option>
-        <option value="spearow">Spearow</option>
-        <option value="fearow">Fearow</option>
-        <option value="ekans">Ekans</option>
-        <option value="arbok">Arbok</option>
-        <option value="pikachu">Pikachu</option>
-        <option value="raichu">Raichu</option>
-        <option value="aerodactyl">Aerodactyl</option>
-        <option value="snorlax">Snorlax</option>
-        <option value="articuno">Articuno</option>
-        <option value="zapdos">Zapdos</option>
-        <option value="moltres">Moltres</option>
-        <option value="dratini">Dratini</option>
-        <option value="dragonair">Dragonair</option>
-        <option value="dragonite">Dragonite</option>
-        <option value="mewtwo">Mewtwo</option>
-        <option value="mew">Mew</option>
-      </select>
-      <input type="submit" value="Search" />
-    </form>
+    <div class="container">
+      <h1>Pokedex</h1>
+      <form action="{% url 'pokedex' %}">
+        <fieldset>
+          <div class="form-group">
+            <label for="pokemon" class="form-label mt-4">Select Pokemon</label>
+            <select class="form-select" name="pokemon" id="pokemon">
+              <option value="bulbasaur">Bulbasaur</option>
+              <option value="ivysaur">Ivysaur</option>
+              <option value="venusaur">Venusaur</option>
+              <option value="charmander">Charmander</option>
+              <option value="charmeleon">Charmeleon</option>
+              <option value="charizard">Charizard</option>
+              <option value="squirtle">Squirtle</option>
+              <option value="wartortle">Wartortle</option>
+              <option value="blastoise">Blastoise</option>
+              <option value="caterpie">Caterpie</option>
+              <option value="metapod">Metapod</option>
+              <option value="butterfree">Butterfree</option>
+              <option value="weedle">Weedle</option>
+              <option value="kakuna">Kakuna</option>
+              <option value="beedrill">Beedrill</option>
+              <option value="pidgey">Pidgey</option>
+              <option value="pidgeotto">Pidgeotto</option>
+              <option value="pidgeot">Pidgeot</option>
+              <option value="rattata">Rattata</option>
+              <option value="raticate">Raticate</option>
+              <option value="spearow">Spearow</option>
+              <option value="fearow">Fearow</option>
+              <option value="ekans">Ekans</option>
+              <option value="arbok">Arbok</option>
+              <option value="pikachu">Pikachu</option>
+              <option value="raichu">Raichu</option>
+              <option value="aerodactyl">Aerodactyl</option>
+              <option value="snorlax">Snorlax</option>
+              <option value="articuno">Articuno</option>
+              <option value="zapdos">Zapdos</option>
+              <option value="moltres">Moltres</option>
+              <option value="dratini">Dratini</option>
+              <option value="dragonair">Dragonair</option>
+              <option value="dragonite">Dragonite</option>
+              <option value="mewtwo">Mewtwo</option>
+              <option value="mew">Mew</option>
+            </select>
+          </div>
+        </fieldset>
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+    </div>
   </body>
 </html>
