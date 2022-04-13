@@ -9,6 +9,7 @@ def pokedex(request):
     pokemon = request.GET.get('pokemon')
     endpoint = f'https://pokeapi.co/api/v2/pokemon/{pokemon}'
     res = requests.get(endpoint).json()
+    
     game_name = res['name']
     game_index = res['game_indices'][3]['game_index']
     game_type = res['types'][0]['type']['name']
